@@ -1,0 +1,21 @@
+div.center {
+    text-align: center;
+}
+div.lavalink {
+    background-color: darkgreen;
+    padding: 10px;
+}
+div.inputs {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: green;
+}
+div.code {
+    padding: 6px;
+    text-align: center;
+    background-color: gray;
+}
+code {
+    color: white;
+}

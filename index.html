@@ -1,8 +1,36 @@
 <html>
   <head>
     <title>Config Generator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>This is the main page of the Config Generator for good-discord-bot/bot</h1>
+    <div class="center">
+      <h1>This is the main page of the Config Generator for good-discord-bot/bot</h1>
+    </div>
+    <div class="code">
+      <code id="code">{
+        "token": "abc.def.ghi",
+        "mongoURI": "mongodb://127.0.0.1/",
+        "prefix": ".",
+        "status": "online",
+        "lavalinkNode": {}
+      }</code>
+    </div>
+    <div class="inputs">
+      <input type="text" id="token">Token</input><br>
+      <input type="text" id="mongodb">MongoDB</input><br>
+      <input type="text" id="status">Status (invisible, dnd, online or idle)</input><br>
+      <input type="text" id="prefix">Prefix</input><br>
+      <input type="checkbox" onClick="lavalink()" id='lavalinkCheckbox'>Lavalink</input><br>
+      <div class="lavalink" id="lavalinkOptions" style="display: none;">
+        <input type="text" id="llPort">Port</input><br>
+        <input type="text" id="llHname">Hostname</input><br>
+        <input type="text" id="llSecure">Secure (put false if not on a secure domain (ip, no ssl domain), true otherwise.)</input><br>
+        <input type="text" id="llPassword">Password</input><br>
+      </div>
+      <button onClick="generate()">Generate Config!</button>
+    </div>
   </body>
 </html>
